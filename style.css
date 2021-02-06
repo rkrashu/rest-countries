@@ -9,5 +9,15 @@
     border-collapse: collapse;
     text-align: center;
     margin: 5px;
+    padding: 20px;
 
 }
+.name{
+    color:rgb(88, 0, 252)
+}
+#title img{
+    width: 400px;
+}
+#title{
+
+text-align: center;}
