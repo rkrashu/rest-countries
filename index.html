@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1 style="font-size: 60px; color: rgb(223, 128, 5); text-align: center;">COUNTRY-LIST</h1>
+    <div id= all-country>
+
+    </div>
+  
+    
+<script>
+    fetch('https://restcountries.eu/rest/v2/all')
+    .then(res=>res.json())
+    .then(data=> {
+        console.log(data[0])
+        const countryName = data.map(country=>{
+            return `<div class=country-details>
+                    <h1 class=name>${country.name}</h1>
+                    <h3> Capital : ${country.capital}</h3>
+                </div>`
+            
+        }).join( " ")
+        console.log(countryName)
+        document.getElementById("all-country").insertAdjacentHTML("afterbegin", countryName)
+        })
+
+      
+        
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+#all-country{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.country-details{
+    border: 1px solid hsl(0, 0%, 0%);
+    border-radius: 1px;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 5px;
+
+}
